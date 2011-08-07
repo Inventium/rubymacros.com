@@ -27,11 +27,14 @@ understand.
 ** M4
 
 ** CPP - Allows (eponymous) preprocessing of 
-code relieving the burden on compiler, linker.
+code relieving the burden on compiler and linker. CPP trades
+compile time substitution for run time elimination
+of function calls. Example: min and max are 
+often implemented as macros in C and C++.
+
 CPP can be used as for general-purpose macros
 in any text file; it is not limited to C 
 programming language source files.
-
 
 ** TeX - Textual replacement eliminates commonly patterns, and allows 
 parameterization of structurally repetitive but non-identical construction.
@@ -47,9 +50,12 @@ parameterization of structurally repetitive but non-identical construction.
 
 ** Macros which operate on parse trees rather than strings.
 ** Parse trees as inputs, parse trees as outputs.
+** Delayed evaluation; call-by-name.
 ** Methods which run at parse time, instead of at run time. 
-Becaue they are methods, they are turing complete and have 
+** Because macro are methods, they are Turing complete and have 
 the full power of Ruby methods.
+** Because macros are evaluated at parse time, they do not
+have access to the "full" Ruby system.
 
 
 ** Helps keep things DRY which isn't methods, classes etc.
@@ -57,7 +63,7 @@ the full power of Ruby methods.
 Example: Looking for a closing parens in strings.
 Finding matching parens is easy for a single pair.
 With more than a single and nested parens, you end
-up writing a paerser anyway.
+up writing a parser anyway.
 
 * 0th order: (myexpr)
 * 1st order: (my(expr))
@@ -82,8 +88,8 @@ sequences can include escaped quote characters (or backslashes!) which must be i
 
 The combination of all these rules makes a system which is quite difficult to process. Basically, 
 you must be able to parse the whole language in order to handle the general case. This is too 
-difficult of a 
-(tangential) problem to handle in order to solve your goal of being able to process your language 
+difficult of a problem (and tangential to what you really want to do) 
+to handle in order to solve your goal of being able to process your language 
 in order to write a textual macro which solves whatever 'business' problem you're trying to solve. 
 
 It's better to have the language parsed for you already (even if it's something easy to 
@@ -95,9 +101,6 @@ right level of abstraction.
 
 
 
-
-
-
 ## Various methods
 
 
@@ -105,7 +108,7 @@ right level of abstraction.
 
 * Paul Graham
 
-* [Mirah Language](http://www.mirah.org/)
+* [Mirah Language macros](http://www.mirah.org/wiki/Macros)
 
 * Scheme?
 
