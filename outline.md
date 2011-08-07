@@ -1,14 +1,31 @@
 
 # Title: Ruby Macros
 
+<blockquote>
+Hey, what are macros anyway? - 
+<a href="http://ola-bini.blogspot.com/2006/09/three-ways-to-add-ruby-macros.html?showComment=1159199100000#c8031594432717641283">Chris Richards</a>
+
+Good question, Mr. Richards, and one without an easy answer.
+
+Perhaps it's easier to answer a related 
+question as posed by Ola Bini:
+<blockquote>
+[What is the purpose of ruby macros?](http://ola-bini.blogspot.com/2006/09/three-ways-to-add-ruby-macros.html)
+1.) generate code
+2.) Give ruby syntax (eg expressed in AST) a different meaning in a specific context, ie transform a ruby block into another.
+</blockquote>
+
+From the Pickaxe (4th ed., p. 378), we have macros defined as 
+Ruby methods which generate code "behind the scenes" by 
+turning small bits of code into larger bits of code.
 
 
 ## Introduction to the problem
 
 
-Macros are used for 
+In general, macros are used for 
 * Textual replacement
-
+* "Method expansion"
 
 Rule of Thumb from Lisp: When you can use
 a function, do so. Functions are easier to 
@@ -27,13 +44,13 @@ understand.
 ** M4
 
 ** CPP - Allows (eponymous) preprocessing of 
-code relieving the burden on compiler and linker. CPP trades
-compile time substitution for run time elimination
+C and C++ code relieving the burden on compiler and linker. 
+CPP trades compile time substitution for run time elimination
 of function calls. Example: min and max are 
-often implemented as macros in C and C++.
+may be implemented as macros in C and C++.
 
-CPP can be used as for general-purpose macros
-in any text file; it is not limited to C 
+CPP can be used for general-purpose string 
+substitution in any text file; it is not limited to C 
 programming language source files.
 
 ** TeX - Textual replacement eliminates commonly patterns, and allows 
