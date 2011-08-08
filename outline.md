@@ -172,6 +172,12 @@ right level of abstraction.
 [Coding horror](http://www.codinghorror.com/blog/2011/07/nobodys-going-to-help-you-and-thats-awesome.html)
 
 
+### Required reading
+
+* On Lisp
+* Ola Bini
+
+
 ## Execution - Exercises - Problem solving - Examples
 
 
