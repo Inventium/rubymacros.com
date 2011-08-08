@@ -55,19 +55,17 @@ understand.
  * M4
 
  * CPP - Allows (eponymous) preprocessing of 
- C and C++ code relieving the burden on compiler and linker. 
- CPP trades compile time substitution for run time elimination
- of function calls. Example: min and max are 
- may be implemented as macros in C and C++.
+  C and C++ code relieving the burden on compiler and linker. 
+  CPP trades compile time substitution for run time elimination
+  of function calls. Example: min and max are 
+  may be implemented as macros in C and C++.
 
- CPP can be used for general-purpose string 
- substitution in any text file; it is not limited to C 
- programming language source files.
+  CPP can be used for general-purpose string 
+  substitution in any text file; it is not limited to C 
+  programming language source files.
 
  * TeX - Textual replacement eliminates commonly patterns, and allows 
 parameterization of structurally repetitive but non-identical construction.
-
-
 
  * [Gema](http://gema.sourceforge.net/new/index.shtml)
  * [Lua macros](http://lua-users.org/wiki/LuaMacros)
