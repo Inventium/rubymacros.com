@@ -10,12 +10,12 @@ Good question, Mr. Richards, and one without an easy answer.
 
 Perhaps it's easier to answer a related 
 question as posed by Ola Bini:
-<blockquote>
-[What is the purpose of ruby macros?](http://ola-bini.blogspot.com/2006/09/three-ways-to-add-ruby-macros.html)
 
-1. generate code
-2. Give ruby syntax (eg expressed in AST) a different meaning in a specific context, ie transform a ruby block into another.
-</blockquote>
+> [What is the purpose of ruby macros?](http://ola-bini.blogspot.com/2006/09/three-ways-to-add-ruby-macros.html)
+>
+> 1. generate code
+> 2. Give ruby syntax (eg expressed in AST) a different meaning in a specific context, ie transform a ruby block into another.
+
 
 From the Pickaxe (4th ed., p. 378), we have macros defined as 
 Ruby methods which generate code "behind the scenes" by 
