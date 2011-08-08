@@ -58,9 +58,8 @@ understand.
   C and C++ code relieving the burden on compiler and linker. 
   CPP trades compile time substitution for run time elimination
   of function calls. Example: min and max are 
-  may be implemented as macros in C and C++.
-
-  CPP can be used for general-purpose string 
+  may be implemented as macros in C and C++. CPP can be 
+  used for general-purpose string 
   substitution in any text file; it is not limited to C 
   programming language source files.
 
@@ -72,19 +71,15 @@ parameterization of structurally repetitive but non-identical construction.
  
 
 * Rewriting - substitution - syntax-based macros
-
-
-** Macros which operate on parse trees rather than strings.
-** Parse trees as inputs, parse trees as outputs.
-** Delayed evaluation; call-by-name.
-** Methods which run at parse time, instead of at run time. 
-** Because macro are methods, they are Turing complete and have 
-the full power of Ruby methods.
-** Because macros are evaluated at parse time, they do not
-have access to the "full" Ruby system.
-
-
-** Helps keep things DRY which isn't methods, classes etc.
+ * Macros which operate on parse trees rather than strings.
+ * Parse trees as inputs, parse trees as outputs.
+ * Delayed evaluation; call-by-name.
+ * Methods which run at parse time, instead of at run time. 
+ * Because macro are methods, they are Turing complete and have 
+   the full power of Ruby methods.
+ * Because macros are evaluated at parse time, they do not
+   have access to the "full" Ruby system.
+ * Helps keep things DRY which isn't methods, classes etc.
 
 Example: Looking for a closing parens in strings.
 Finding matching parens is easy for a single pair.
