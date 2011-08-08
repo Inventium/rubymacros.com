@@ -1,10 +1,10 @@
 
-# Title: Ruby Macros
+# Ruby Macros
 
-<blockquote>
-Hey, what are macros anyway? - 
-<a href="http://ola-bini.blogspot.com/2006/09/three-ways-to-add-ruby-macros.html?showComment=1159199100000#c8031594432717641283">Chris Richards</a>
-</blockquote>
+
+> Hey, what are macros anyway? - 
+> <a href="http://ola-bini.blogspot.com/2006/09/three-ways-to-add-ruby-macros.html?showComment=1159199100000#c8031594432717641283">Chris Richards</a>
+
 
 Good question, Mr. Richards, and one without an easy answer.
 
@@ -24,16 +24,16 @@ turning small bits of code into larger bits of code.
 
 ## Introduction to the problem
 
+> Defn: macrophobia - an unreasonable fear of 
+> defining new syntactical constructions.
 
-<blockquote>
-Defn: macrophobia - an unreasonable fear of 
-defining new syntactical constructions.
-</blockquote>
 
 In general, macros are used for
+
 * Language extension via syntax or capability.
 
 These goals are accomplished by:
+
 * Textual replacement
 * "Method expansion"
 
