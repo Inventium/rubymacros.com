@@ -25,17 +25,19 @@ turning small bits of code into larger bits of code.
 ## Introduction to the problem
 
 > Defn: macrophobia - an unreasonable fear of 
-> defining new syntactical constructions.
+> defining new syntactical constructions. - 
+> (Plagiaphrased from Seibel's Practical Common Lisp)
 
 
-In general, macros are used for
+In general, macros are used for language extension via 
 
-* Language extension via syntax or capability.
+* syntax, or 
+* capability.
 
 These goals are accomplished by:
 
 * Textual replacement
-* "Method expansion"
+* Method expansion
 
 
 Rule of Thumb from Lisp: When you can use
@@ -86,6 +88,7 @@ Finding matching parens is easy for a single pair.
 With more than a single and nested parens, you end
 up writing a parser anyway.
 
+~~~~
 * 0th order: (myexpr)
 * 1st order: (my(expr))
 *
@@ -93,6 +96,7 @@ up writing a parser anyway.
             my(/*comment)*/)
             (my("string\")"))
             (my("string\\"))
+~~~~
 
 In the 0th order, you assume that the next close paren after an open paren is the matching
 paren.
