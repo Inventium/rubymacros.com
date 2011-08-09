@@ -50,7 +50,7 @@ understand.
 
 * Substitution
 
- * REXX 
+ * [REXX](http://en.wikipedia.org/wiki/REXX) 
 
  * M4
 
