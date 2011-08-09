@@ -31,20 +31,59 @@ turning small bits of code into larger bits of code.
 
 In general, macros are used for language extension via 
 
-* syntax, or 
-* capability.
+1. syntax, or 
+2. capability.
 
 These goals are accomplished by:
 
-* Textual replacement
-* Method expansion
+1. Textual replacement
+2. Method expansion
+
+
+Macros may appear identical to functions 
+by accepting parameters and returning a result.
+The difference is how macro go about their business.
+A macro may not return a result directly, instead
+the result is obtained from the expression returned
+by the macro. When this expression-returning 
+process is invisible, macros look like functions.
 
 
 Rule of Thumb from Lisp: When you can use
 a function, do so. Functions are easier to 
 understand.
 
+#### Function
+
+A function tells the program to go somewhere
+else, do something, and come back with results.
+
+
+#### Macro 
+
+A macro tells the program to go get some code, 
+put that code in this here place, then find 
+the result of that code.
+
+
 ### What, exactly, is the problem macros solve?
+
+Macros, essentially, allow you to make small, 
+ugly pieces of code go away. 
+
+* When you find yourself writing the same little
+bits of code over and over, and that code doesn't
+"fit" into a class, that's a good candidate for a 
+macro.
+
+* When you have long strings in arbitrary places, 
+consider replacing those with macros.
+
+* When your logic becomes convoluted and clunky, 
+consider replacing that logic with a macro expressing
+exactly what's needed.
+
+
 
 
 
@@ -180,9 +219,19 @@ right level of abstraction.
 [Coding horror](http://www.codinghorror.com/blog/2011/07/nobodys-going-to-help-you-and-thats-awesome.html)
 
 
-### Required reading
+### References and required reading
 
-* On Lisp
+* [Programming Ruby 1.9](http://pragprog.com/book/ruby3/programming-ruby-1-9) 
+Chapter 24 on metaprogramming has excellent
+examples of how macros are defined and used in Ruby.
+
+* Paul Graham's [On Lisp](http://lib.store.yahoo.net/lib/paulgraham/onlisp.pdf) 
+should be required reading for all Rubyists regardless of any interest in 
+Ruby macros. It's that important. And it's free to download a PDF file 
+of the book. Do all the examples, by hand.
+
+* Peter Seibel's [Practical Common Lisp]() is also downloadable as a free PDF.
+
 * Ola Bini
 
 
@@ -271,4 +320,14 @@ introspection at the level parse tree.
 * Code
 * Exercise 
 
+#### About
 
+This micro-project came about as the result of a Google search.
+After wading through pages of meaningless search results, 
+cloned and swiped web pages, blog posts parroting the 
+same old-same old, one of the authors found himself 
+emitting Chewbacca-style roars of frustration.  A little
+SEO juju and snapped up the exact match domain, to wit:
+rubymacros.com, and a vow to set the matter straight once 
+and for all, with some links to the best available pages
+on the web. Curation doncha know.
