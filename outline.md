@@ -342,7 +342,7 @@ you'll break your pick on it pretty quickly. This stuff makes parsing xml with r
 * [Ruby Macros](http://github.com/coatl/rubymacros) 
 
 
-
+* [Arc macros](http://ycombinator.com/arc/tut.txt) about 3/4 down page.
 
 
 ### Reg Braithewaite
