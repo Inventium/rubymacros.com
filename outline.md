@@ -1,4 +1,3 @@
-
 # Ruby Macros  
 
 
@@ -33,8 +32,8 @@ turning small bits of code into larger bits of code.
 
 In general, macros are used for language extension via 
 
-1. syntax, or 
-2. capability.
+1. extending syntax to reduce awkward, inconvenient or otherwise unimplementable code, or 
+2. extending the capability of a program.
 
 These goals are accomplished by:
 
