@@ -383,6 +383,7 @@ of the book. Do all the examples, by hand.
 
 * Ola Bini
 
+* Interesting [RSpec macro thread](http://rubyforge.org/pipermail/rspec-users/2011-August/020463.html)
 
 ## Execution - Exercises - Problem solving - Examples
 
