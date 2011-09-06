@@ -1,6 +1,6 @@
 # Ruby Macros  
 
-
+(work in progress)
 
 > Hey, what are macros anyway? - 
 > <a href="http://ola-bini.blogspot.com/2006/09/three-ways-to-add-ruby-macros.html?showComment=1159199100000#c8031594432717641283">Chris Richards</a>
@@ -412,11 +412,12 @@ introspection at the level parse tree.
 * Exercise 
 
 
-### Example 3
+### Example 3 
 
 * Problem
-* Solution
-* Code
+* Solution: Use a class method in a class definition
+* Code: From Paolo Perrotta's "Ruby Metaprogramming", p. 241, listed as a spell. More
+information on this pattern given on p. 115.
 * Exercise 
 
 ### Example 4
