@@ -464,12 +464,6 @@ information on this pattern given on p. 115.
 * Exercise 
 
 
-### Example 10
-
-* Problem
-* Solution
-* Code
-* Exercise 
 
 #### About
 
