@@ -425,6 +425,13 @@ information on this pattern given on p. 115.
 * Problem
 * Solution
 * Code
+ 
+~~~~
+def some_piece_of_stuff
+  { :name => 'foo' }
+end
+~~~~
+
 * Exercise 
 
 ### Example 5
@@ -434,34 +441,6 @@ information on this pattern given on p. 115.
 * Code
 * Exercise 
 
-### Example 6
-
-* Problem
-* Solution
-* Code
-* Exercise 
-
-### Example 7
-
-* Problem
-* Solution
-* Code
-* Exercise 
-
-### Example 8
-
-* Problem
-* Solution
-* Code
-* Exercise 
-
-
-### Example 9
-
-* Problem
-* Solution
-* Code
-* Exercise 
 
 
 
