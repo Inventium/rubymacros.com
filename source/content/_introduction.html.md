@@ -1,6 +1,6 @@
-# Ruby Macros  
 
-(work in progress)
+
+(A Work In Progress)
 
 > Hey, what are macros anyway? - 
 > <a href="http://ola-bini.blogspot.com/2006/09/three-ways-to-add-ruby-macros.html?showComment=1159199100000#c8031594432717641283">Chris Richards</a>
@@ -86,9 +86,7 @@ consider replacing that logic with a macro expressing
 exactly what's needed. 
 
 
-
-
-
+~~~~
 
 with foo.bar {
   baz
@@ -111,4 +109,6 @@ macro with arg
     node
   }
 end
+~~~~
+{:lang="ruby"}
 
