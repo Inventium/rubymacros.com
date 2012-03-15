@@ -14,9 +14,9 @@
 ###
 # Haml
 ###
-require 'kramdown'
-set :markdown_engine, :kramdown
-#set :markdown, :layout_engine => :md
+#require 'kramdown'
+#set :markdown_engine, :kramdown
+set :markdoan, :layout_engine => :haml
 
 
 # CodeRay syntax highlighting in Haml
