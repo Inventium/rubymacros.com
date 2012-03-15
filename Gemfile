@@ -1,5 +1,6 @@
-source 'http://rubygems.org'
+source :rubygems
 
 gem 'middleman'
+gem 'haml'
 gem 'kramdown'
 gem 'coderay'

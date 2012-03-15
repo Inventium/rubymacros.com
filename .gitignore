@@ -1,3 +1,4 @@
 build
 .sass-cache
 .project
+.DS_Store
