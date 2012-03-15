@@ -86,10 +86,7 @@ consider replacing that logic with a macro expressing
 exactly what's needed. 
 
 
-
-
-
-
+~~~~
 with foo.bar {
   baz
   quux
@@ -111,6 +108,8 @@ macro with arg
     node
   }
 end
+~~~~
+
 
 
 ## Benefits of parse tree substitution 
@@ -145,12 +144,17 @@ of the common tasks that need to be done inside of loops.
 
 examples stolen from: http://common-lisp.net/project/iterate/doc/Introduction.html
 
+~~~~
 (iter (for i from 1 to 10)
         (collect i))   
+~~~~
 
 this doesn't seem so exciting. Ruby has collect too, and some nice looping facilities. The ruby equiv is:
 
-(1..10).map{|i| i}  #=>[1,2,3,4,5,6,7,8,9,10]
+~~~~
+(1..10).map{|i| i}  \#=>[1,2,3,4,5,6,7,8,9,10]
+~~~~
+
 
 But ITERATE has many more capabilities than the actually fairly limited set of things that ruby's each, map, inject, find, etc can do for you
 
