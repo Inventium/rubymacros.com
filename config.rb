@@ -14,6 +14,10 @@
 ###
 # Haml
 ###
+require 'kramdown'
+set :markdown_engine, :kramdown
+#set :markdown, :layout_engine => :md
+
 
 # CodeRay syntax highlighting in Haml
 # First: gem install haml-coderay
