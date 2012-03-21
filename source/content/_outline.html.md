@@ -478,6 +478,6 @@ library may be an add on library.
  * http://c2.com/cgi/wiki?TypingQuadrant
  * http://www.generative-programming.org/
  * http://c2.com/cgi/wiki?GenerativeProgramming
-
+ * Macro style programming, Rails 3 Way, p. 121
 
 
