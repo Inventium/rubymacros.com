@@ -1,4 +1,25 @@
 
+## Summary
+
+### References and required reading
+
+* [Programming Ruby 1.9](http://pragprog.com/book/ruby3/programming-ruby-1-9) 
+Chapter 24 on metaprogramming has excellent
+examples of how macros are defined and used in Ruby.
+
+* Paul Graham's [On Lisp](http://lib.store.yahoo.net/lib/paulgraham/onlisp.pdf) 
+should be required reading for all Rubyists regardless of any interest in 
+Ruby macros. It's that important. And it's free to download a PDF file 
+of the book. Do all the examples, by hand.
+
+* Peter Seibel's [Practical Common Lisp](http://www.gigamonkeys.com/book/) is available online.
+
+* Ola Bini
+
+* Interesting [RSpec macro thread](http://rubyforge.org/pipermail/rspec-users/2011-August/020463.html)
+
+
+
 
 #### About
 

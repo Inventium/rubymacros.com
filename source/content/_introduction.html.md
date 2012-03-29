@@ -1,7 +1,5 @@
 
 
-(A Work In Progress)
-
 > Hey, what are macros anyway? - 
 > <a href="http://ola-bini.blogspot.com/2006/09/three-ways-to-add-ruby-macros.html?showComment=1159199100000#c8031594432717641283">Chris Richards</a>
 
@@ -43,7 +41,7 @@ These goals are accomplished by:
 
 Macros may appear identical to functions 
 by accepting parameters and returning a result.
-The difference is how macro go about their business.
+The difference is how macros go about their business.
 A macro may not return a result directly, instead
 the result is obtained from the expression returned
 by the macro. When this expression-returning 
@@ -86,55 +84,24 @@ consider replacing that logic with a macro expressing
 exactly what's needed. 
 
 
-* Example from TeX or CPP here
-
-
-
-
 ### Who this web page is for
 
-The authors of this web page come from a C/C++
-and a Lisp background, respectively. The web macro
+The authors of this web page come from a C/TeX
+and a Ruby background, respectively. Macros
 in those environments have specific connotations
 which overlap Ruby's notion of macros, but is not
 at all the same.  Accordingly, this web page will
 be of most use for people coming from those languages.
 If you, the reader, have learned to program primarily
-from Ruby, most of the following discussion revolves
+from Ruby, some of the following discussion revolves
 around certain aspects of metaprogramming which you
-already know.
+may already know.
 
 However, if you are moving from Ruby to languages
 in either the Lisp camp or the C/C++ camp, you will 
 find some valuable information here.
 
 
-
-~~~~
-
-with foo.bar {
-  baz
-  quux
-  fleeble
-}
-       =>
-t=foo.bar
-t.baz
-t.quux
-t.fleeble
-
-
-macro with arg
-  :( t= ^arg )
-  yield.deep_copy{|node|
-    if RedParse::CallNode===node and node.receiver.nil?
-      node.receiver=:(t) 
-    end
-    node
-  }
-end
-~~~~
-{:lang="ruby"}
-
+## To be continued...
 
 
