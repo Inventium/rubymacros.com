@@ -7,8 +7,11 @@
         = stylesheet_link_tag "bootstrap.css"
         = stylesheet_link_tag "rubymacros.css"
         = yield_content :head
+    %script{:src => "http://use.typekit.com/xqo0qff.js", :type => "text/javascript"}
+      :javascript
+          try{Typekit.load();}catch(e){}
   %body{:class => page_classes}
     .container#main{:role => "main"}
       .row
-        .span12
+        .span8.offset2
           = yield
