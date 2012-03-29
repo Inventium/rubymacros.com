@@ -86,6 +86,30 @@ consider replacing that logic with a macro expressing
 exactly what's needed. 
 
 
+* Example from TeX or CPP here
+
+
+
+
+### Who this web page is for
+
+The authors of this web page come from a C/C++
+and a Lisp background, respectively. The web macro
+in those environments have specific connotations
+which overlap Ruby's notion of macros, but is not
+at all the same.  Accordingly, this web page will
+be of most use for people coming from those languages.
+If you, the reader, have learned to program primarily
+from Ruby, most of the following discussion revolves
+around certain aspects of metaprogramming which you
+already know.
+
+However, if you are moving from Ruby to languages
+in either the Lisp camp or the C/C++ camp, you will 
+find some valuable information here.
+
+
+
 ~~~~
 
 with foo.bar {
@@ -111,4 +135,6 @@ macro with arg
 end
 ~~~~
 {:lang="ruby"}
+
+
 
