@@ -14,14 +14,32 @@
 ###
 # Haml
 ###
+
+###
+# Markdown
+# ###
 require 'kramdown'
 set :markdown_engine, :kramdown
+#require 'redcarpet'
+#set :markdown_engine, :redcarpet
+
 set :markdown, :layout_engine => :markdown
 
 
 # CodeRay syntax highlighting in Haml
 # First: gem install haml-coderay
-# require 'haml-coderay'
+#require 'haml-coderay'
+#require 'haml/coderay'
+=begin
+require 'rack/codehighlighter'
+require "coderay"
+#require 'pygments'
+use Rack::Codehighlighter, 
+    :coderay,
+    :element => "pre",
+    :pattern => /\A:::([-_+\w]+)\s*\n/,
+    :markdown => true
+=end
 
 # CoffeeScript filters in Haml
 # First: gem install coffee-filter

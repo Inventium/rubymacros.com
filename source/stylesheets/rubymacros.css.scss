@@ -53,3 +53,14 @@ p {
 div.subtitle {
   text-align: center;
 }
+
+span.line-numbers {
+  padding-left: 10px;
+  padding-right: 25px;
+}
+
+pre {
+  white-space: pre;
+  word-wrap: break-word;
+  word-break: break-all;
+}
