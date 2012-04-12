@@ -1,4 +1,13 @@
 
+## From Rails Recipes
+
+From rails recipe, #1:
+To model rich many-to-many relationships in Rails, use join models to
+leverage
+
+Active Record's has_many :through() macro.
+
+
 ## Macros and the Ruby metaprogramming model
 
 
