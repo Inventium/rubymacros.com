@@ -33,41 +33,37 @@ of the common tasks that need to be done inside of loops.
 examples stolen from: http://common-lisp.net/project/iterate/doc/Introduction.html
 
 
-~~~~
+<pre class="brush:clojure">
 (iter (for i from 1 to 10)
-  (collect i))   
-~~~~
-{:lang="ruby"}
+  (collect i)) 
+</pre>
 
 This doesn't seem so exciting. Ruby has collect too, and some nice looping facilities. The ruby equiv is:
 
-~~~~
+<pre class="brush:ruby">
 (1..10).map{|i| i}  # =>[1,2,3,4,5,6,7,8,9,10]
-~~~~
-{:lang="ruby"}
+</pre>
 
 But ITERATE has many more capabilities than the actually fairly limited set of things that ruby's each, map, inject, find, etc can do for you
 
 This one iterates over a list and collects the odd numbers in it:        
 
     
-~~~~
+<pre class="brush:clojure">
 (iter (for el in list)
   (if (and (numberp el) (oddp el))
     (collect el)))
-~~~~
-{:lang="lisp"}
+</pre>
 
 That kind of thing can't be done with map in the general case without falling back to the imperative form of loop; a while or for loop. 
 You can't do it with #collect.
 
-~~~~
+<pre class="brush:clojure">
  (iter (for (key . item) in alist)
     (for i from 0)
     (declare (fixnum i))
     (collect (cons i key)))
-~~~~
-{:lang="lisp"}
+</pre>
 
 This loop takes the keys of an alist and returns a new alist associating 
 the keys with their positions in the original list. The compiler declaration 
@@ -76,19 +72,20 @@ for i will appear in the generated code in the appropriate place.
 
 To find the length of the shortest element in a list:
 
-~~~~
-  (iterate (for el in list)
-           (minimize (length el)))
-~~~~
-{:lang="lisp"}           
+<pre class="brush:clojure">
+(iterate (for el in list)
+  (minimize (length el)))
+</pre>
+
            
 To return t only if every other element of a list is odd:
 
-  (iterate (for els on list by #'cddr)
-           (always (oddp (car els))))         
+<pre class="brush:clojure">
+(iterate (for els on list by #'cddr)
+  (always (oddp (car els))))         
+</pre>
 
-
-http://common-lisp.net/project/iterate/doc/index.html
+* http://common-lisp.net/project/iterate/doc/index.html
 
 
 Iterate allows you to declare your loop at high level, rather than getting 
@@ -98,7 +95,8 @@ compiled down to the equivalent of efficient while loops, without
 iterating over data sets multiple times or a lot of extra bookkeeping. 
 
 
-~~~~
+
+<pre class="brush:ruby">
 with foo.bar {
   baz
   quux
@@ -120,8 +118,8 @@ macro with arg
     node
   }
 end
-~~~~
-{:lang="ruby"}
-
+</pre>
 
 A small amount of math: \\(\forall x \in X\\)
+
+
