@@ -14,13 +14,19 @@ question as posed by Ola Bini:
 > 1. generate code
 > 2. Give ruby syntax (eg expressed in AST) a different meaning in a specific context, ie transform a ruby block into another.
 
+We'll have more to learn from Mr. Bini shortly. In the meantime, let's
+briefly examine what Ruby has to offer.
+
+### The state of the Ruby
 
 From the Pickaxe (4th ed., p. 378), we have macros defined as 
 Ruby methods which generate code "behind the scenes" by 
 turning small bits of code into larger bits of code.
 
+(Add more bits here, briefly summarizing without going into much
+detail.)
 
-## Introduction to the problem
+## Introduction to the macro problem
 
 > Defn: macrophobia - an unreasonable fear of 
 > defining new syntactical constructions. - 
