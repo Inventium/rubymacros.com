@@ -99,6 +99,6 @@ in either the Lisp camp or the C/C++ camp, you will
 find some valuable information here.
 
 
-## To be continued...
+## We're gonna talk about Ruby next... (stay tuned)
 
 
