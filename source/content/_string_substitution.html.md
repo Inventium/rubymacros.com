@@ -1,4 +1,9 @@
 
+## Party's over
+
+Now that we're through the easy stuff (!), let's take a closer look a
+what the concepts really mean, string and parse tree substitution.
+
 #### A tiny treatise on string substitution
 
 Consider, for example, looking for a closing parens in strings.
@@ -6,7 +11,7 @@ Finding matching parens is easy for a single pair.
 With more than a single and nested parens, you end
 up writing a parser anyway.
 
-~~~~
+<pre class="brush:clojure">
  0th order: (myexpr)
  1st order: (my(expr))
 
@@ -14,8 +19,8 @@ up writing a parser anyway.
              my(/*comment)*/)
             (my("string\")"))
             (my("string\\"))
-~~~~
-{: lang="lisp"}
+</pre>
+
 
 In the 0th order, you assume that the next close paren after an open paren is the matching
 paren.
@@ -48,15 +53,14 @@ ambiguous; they can be operators or the beginnings or strings (or string-like th
 regexps) depending on context. / and % are the most notorious examples of these. Consider the 
 following, where % might start a string, or be the modulo operator
 
-~~~~
+<pre class="brush:ruby">
 p%q  #op
 p% q  #op
 p % q  #op
 p %q  #start of string
 1 %2  #op
 p=1; p %q  #op
-~~~~
-{: lang="ruby"}
+</pre>
 
 this behavior means that in order to figure out how to handle %, you must also keep track of 
 what local variables are defined in the current context, and what the type of the last token was.

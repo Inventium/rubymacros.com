@@ -39,9 +39,9 @@ These goals are accomplished by:
 Macros may appear identical to functions 
 by accepting parameters and returning a result.
 The difference is how macros go about their business.
-A macro may not return a result directly, instead
-the result is obtained from the expression returned
-by the macro. When this expression-returning 
+A macro may not *return* a result directly, instead
+the *result is obtained from the expression returned
+by the macro*. When this expression-returning 
 process is invisible, macros look like functions.
 
 
@@ -81,13 +81,20 @@ consider replacing that logic with a macro expressing
 exactly what's needed. 
 
 
+Scale is important. Convoluted and clunky logic, in this context,
+implies relatively short pieces of code. If your whole program is
+convoluted and clunky (no shame, it happens), implementing macros is
+probably not the best use of your time.
+
+
+
 ### Who this web page is for
 
-The authors of this web page come from a C/TeX
-and a Ruby background, respectively. Macros
-in those environments have specific connotations
+The authors of this web page come from primarily a C/TeX
+background, with a small amount of Lisp/Scheme and Ruby.
+Macros in those environments have specific connotations
 which overlap Ruby's notion of macros, but is not
-at all the same.  Accordingly, this web page will
+quite the same.  Accordingly, this web page will
 be of most use for people coming from those languages.
 If you, the reader, have learned to program primarily
 from Ruby, some of the following discussion revolves
@@ -99,6 +106,6 @@ in either the Lisp camp or the C/C++ camp, you will
 find some valuable information here.
 
 
-## We're gonna talk about Ruby next... (stay tuned)
+## We're gonna talk about Ruby now...
 
 

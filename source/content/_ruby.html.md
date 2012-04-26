@@ -30,6 +30,10 @@ The `attr_reader` function should be familiar to everyone with Ruby programming 
 Implementing `attr_reader` is a perfect example of what are viewed as macros in 
 Ruby, which are implemented using Ruby's metaprogramming capabilities. 
 
+But we're going to call it `rm_attr_reader` to avoid collision with
+Ruby's standard library implementation of `attr_reader`. (The `rm_`
+*namespaces* our new macros; "rubymacros" after all.) 
+
 <pre class="brush:ruby">
 class Module
 
@@ -58,7 +62,35 @@ You can type all the above into `irb` or put in a file an load it
 into `irb` or however you like to execute your Ruby. 
 
 
+#### Eval version
+
+That was nice, but kind of complicated, what with the `define_method`
+and all. We can make it simpler, so let's.
+
+Consider a "normal" method with `def` getting a normal instance
+variable.
+
+<pre class="brush:ruby">
+class Module
+  def rm_attr_reader name
+    eval "
+      def #{name}
+        @#{name}
+      end
+    "
+  end
+end
+</pre>
+
+The drawback with this method is putting everything into a string and
+invoking eval. This is bad because 1. calling `eval` is potentially
+risky, you will need to watch for code injection; 2. it's kind of ugly. 
+
 #### C Preprocessor (CPP) version
+
+Here's a cool trick, leveraging the C Preprocessor's macro facility
+right in your Ruby code. Check out this example of a text substitution
+macro:
 
 <pre class="brush:ruby">
 #define RM_ATTR_READER(X)  def X; @##X end
@@ -74,34 +106,29 @@ f = Foo.new "quux"
 p f.bar
 </pre>
 
-One limitation of this technique is that Ruby comments are "preprocessed" as 
-well... except that outside of serendipitous use of predefined CPP directives,
-won't parse. But even if it did parse, the odds of having it do what you want
-are pretty low. Like, zero low.
+One limitation of this technique is that Ruby comments are treated as
+preprocessor directives.  For example, `# My Ruby comment` isn't
+parseable using CPP.  One could, one supposes, use `c/c++` commenting 
+in lieue of Ruby commenting.  Which smacks of jumping from frying 
+pan to fire, to stretch a metaphor.
 
-One could, one supposes, use `c/c++` commenting in lieue of Ruby commenting.
-Which smacks of jumping from frying pan to fire, to stretch a metaphor.
+But, our example runs: 
 
 <pre class="brush:bash">
 $ gcc -x c -E cpp_attr_reader.rb | ruby
-cpp_attr_reader.rb:5:1: error: pasting "@" and "bar" does not give a valid preprocessing token
 "quux"
 </pre>
 
-#### Eval version
-<pre class="brush:ruby">
-class Module
-  def rm_attr_reader name
-    eval "
-      def #{name}
-        @#{name}
-      end
-    "
-  end
-end
-</pre>
+Nifty!
 
-#### Parse subs
+
+#### Parse tree substitution
+
+The previous two above, essentially, are variations on string substitution. A
+"true" macro (true in the Lisp sense) can't be implemented in Ruby
+without extending Ruby syntax, and having (library) code capable of
+parsing the extended syntax. The next example uses the rubymacros gem:
+
 <pre class="brush:ruby">
 macro rm_attr_reader name
   :(
@@ -111,3 +138,7 @@ macro rm_attr_reader name
   )
 end
 </pre>
+
+The first problem is obvious: `macro` is not a reserved word in Ruby,
+hence the syntax highlighter doesn't highlight the syntax correctly. The 
+:( ... ) and unary ^ constructs are also non-standard.
