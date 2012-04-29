@@ -1,0 +1,19 @@
+- site = 'Get Rich or Get Welfare'
+%ul.social-links
+  %li#twitter
+    %a{:href => "http://twitter.com/home?status=Check%20out%20#{h site}-%20http://rubymacros.com/"}
+      %img{:alt => "Share this on twitter", :src => "images/twitter.png", :title => "Share this on twitter"}
+  %li#facebook
+    %a{:href => "http://www.facebook.com/sharer.php?u=http://rubymacros.com/&t=rubymacros", :target => "blank"}
+      %img{:alt => "Share this on Facebook", :src => "images/facebook.png", :title => "Share this on Facebook"}
+  -#%li#facebook-like
+    -#.fb-like{"data-href" => "http://rubymacros.com/", "data-layout" => "button_count", "data-send" => "true", "data-show-faces" => "true", "data-width" => "450"}
+  %li#gplus
+    / g:plusone size="small" annotation="none"></g:plusone
+    .g-plusone{"data-count" => "false", "data-size" => "small"}
+  %li#digg
+    %a.DiggThisButton.DiggIcon
+  %li#stumbleupon
+    %su:badge{:layout => "4"}
+  %a{:href => "http://www.reddit.com/submit", :onclick => "window.location = 'http://www.reddit.com/submit?url=' + encodeURIComponent(window.location); return false"}
+    %img{:alt => "submit to reddit", :border => "0", :src => "http://www.reddit.com/static/spreddit1.gif"}/
