@@ -15,7 +15,7 @@ question as posed by Ola Bini:
 > 2. Give ruby syntax (eg expressed in AST) a different meaning in a specific context, ie transform a ruby block into another.
 
 We'll have more to learn from Mr. Bini shortly. In the meantime, let's
-briefly examine what Ruby has to offer.
+briefly examine the macro "problem."
 
 ## Introduction to the macro problem
 

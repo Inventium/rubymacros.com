@@ -18,7 +18,9 @@ of the book. Do all the examples, by hand.
 
 * Interesting [RSpec macro thread](http://rubyforge.org/pipermail/rspec-users/2011-August/020463.html)
 
+Macros: I know them when I see them.
 
+Rails helpers.
 
 
 #### About
