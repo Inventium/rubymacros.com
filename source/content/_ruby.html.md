@@ -121,6 +121,9 @@ $ gcc -x c -E cpp_attr_reader.rb | ruby
 
 Nifty!
 
+Ok, maybe not so nifty. As Vandervoorde and Jossutis might say:
+> Code is replaced by some "stupid text
+replacement mechanism" that has no idea of scope and types.
 
 #### Parse tree substitution
 
