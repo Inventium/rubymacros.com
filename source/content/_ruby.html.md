@@ -122,8 +122,11 @@ $ gcc -x c -E cpp_attr_reader.rb | ruby
 Nifty!
 
 Ok, maybe not so nifty. As Vandervoorde and Jossutis might say:
-> Code is replaced by some "stupid text
+
+<blockquote>
+Code is replaced by some "stupid text
 replacement mechanism" that has no idea of scope and types.
+</blockquote>
 
 #### Parse tree substitution
 
@@ -145,3 +148,24 @@ end
 The first problem is obvious: `macro` is not a reserved word in Ruby,
 hence the syntax highlighter doesn't highlight the syntax correctly. The 
 :( ... ) and unary ^ constructs are also non-standard.
+
+### Common Rails "macros"
+
+Rails is rich in macro-like constructions. Consider the `rake routes`
+command:
+
+<pre class="brush:bash">
+$ rake routes
+       foos GET    /foos(.:format) foos#index
+            POST   /foos(.:format) foos#create
+    new_foo GET    /foos/new(.:format) foos#new
+   edit_foo GET    /foos/:id/edit(.:format) foos#edit
+        foo GET    /foos/:id(.:format) foos#show
+            PUT    /foos/:id(.:format) foos#update
+            DELETE /foos/:id(.:format) foos#update
+</pre>
+
+We're showing something controlled by an `foo`, whatever that may be.
+When you invoke a "route method" using, e.g., `foos_path`, the result is
+indistinguishable from a text substitution macro. 
+

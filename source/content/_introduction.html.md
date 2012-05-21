@@ -93,7 +93,7 @@ probably not the best use of your time.
 The authors of this web page come from primarily a C/TeX
 background, with a small amount of Lisp/Scheme and Ruby.
 Macros in those environments have specific connotations
-which overlap Ruby's notion of macros, but is not
+which overlap Ruby's notion of macros, but are not
 quite the same.  Accordingly, this web page will
 be of most use for people coming from those languages.
 If you, the reader, have learned to program primarily

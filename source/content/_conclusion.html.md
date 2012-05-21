@@ -1,6 +1,14 @@
 
 ## Summary
 
+In the end, we're not really sure whether Ruby has "real" macros or not.
+
+We are sure that Ruby allows construction of methods which behave
+identically to text substitution macros, and that adding parse tree
+substitution would require a bit of syntax hackerage.
+
+
+
 ### References and required reading
 
 * [Programming Ruby 1.9](http://pragprog.com/book/ruby3/programming-ruby-1-9) 
