@@ -3,6 +3,7 @@ source :rubygems
 gem 'middleman'
 gem 'haml'
 gem 'kramdown'
+gem 'capistrano'
 #gem 'redcarpet'
 #gem 'maruku'
 #gem 'coderay'
