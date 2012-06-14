@@ -2,21 +2,19 @@
 
 ## Parse tree substitution 
 
-* Consider an assert macro which allows
-inspect the expression which is passed to the 
-assert method. When constructing error message, 
-the macro can retrieve both arguments.
-Test::Unit solves by creating various methods
-corresponding to various types of conditional 
-operators.  Assert.equals, assert.greater_than, etc etc etc.
-Assert macro gives the value AND the names of the
-arguments to the conditional are in the macro.
-This allows code to run without evaluating 
-the assertion.  Thus, error checking can go 
-into code, without needing to be removing.
+Consider an assert macro which allows inspecting an expression which is
+passed to the assert method. When constructing error message, the macro
+can retrieve both arguments.  Test::Unit solves by creating various
+methods corresponding to various types of conditional operators.  
 
-* This allows implementation of logging which 
-can be switched off at run time as well.
+For example, `assert.equals`, `assert.greater_than`, etc etc etc.
+Assert macro gives the value AND the names of the arguments to the
+conditional are in the macro.  This allows code to run without
+evaluating the assertion.  Thus, error checking can go into code,
+without needing to be removing.
+
+This allows implementation of logging which can be switched off at run
+time as well.
 
 
 
@@ -38,13 +36,15 @@ examples stolen from: http://common-lisp.net/project/iterate/doc/Introduction.ht
   (collect i)) 
 </pre>
 
-This doesn't seem so exciting. Ruby has collect too, and some nice looping facilities. The ruby equiv is:
+This doesn't seem so exciting. Ruby has collect too, and some nice
+looping facilities. The ruby equivalent is:
 
 <pre class="brush:ruby">
 (1..10).map{|i| i}  # =>[1,2,3,4,5,6,7,8,9,10]
 </pre>
 
-But ITERATE has many more capabilities than the actually fairly limited set of things that ruby's each, map, inject, find, etc can do for you
+But ITERATE has many more capabilities than the actually fairly limited
+set of things that ruby's each, map, inject, find, etc can do for you
 
 This one iterates over a list and collects the odd numbers in it:        
 
@@ -55,8 +55,9 @@ This one iterates over a list and collects the odd numbers in it:
     (collect el)))
 </pre>
 
-That kind of thing can't be done with map in the general case without falling back to the imperative form of loop; a while or for loop. 
-You can't do it with #collect.
+That kind of thing can't be done with map in the general case without
+falling back to the imperative form of loop; a while or for loop.  You
+can't do it with #collect.
 
 <pre class="brush:clojure">
  (iter (for (key . item) in alist)
@@ -120,6 +121,5 @@ macro with arg
 end
 </pre>
 
-A small amount of math: \\(\forall x \in X\\)
 
 

@@ -5,8 +5,6 @@ From the Pickaxe (4th ed., p. 378), we have macros defined as
 Ruby methods which generate code "behind the scenes" by 
 turning small bits of code into larger bits of code.
 
-(Add more bits here, briefly summarizing without going into much
-detail.)
 
 The simplest Ruby "macro", a sort of string substitution:
 
@@ -168,4 +166,5 @@ $ rake routes
 We're showing something controlled by an `foo`, whatever that may be.
 When you invoke a "route method" using, e.g., `foos_path`, the result is
 indistinguishable from a text substitution macro. 
+
 
