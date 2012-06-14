@@ -9,6 +9,8 @@ $font-color:  #2a2a2a;
 $font-family: "adobe-caslon-pro",serif;
 $base-font-size:   12px;
 $base-line-height: 18px;
+$list-item-font-size: 14px;
+$paragraph-font-size: 15px;
 
 $total-cols: 12;
 $col-width: 4em;
@@ -53,8 +55,12 @@ h4 {
 p {
   margin: 0 0 9px;
   font-family: $font-family;
-  font-size: 13px;
+  font-size: $paragraph-font-size;
   line-height: 18px;
+}
+
+li {
+  font-size: $list-item-font-size;
 }
 
 div.subtitle {
@@ -72,4 +78,18 @@ pre {
   white-space: pre;
   word-wrap: break-word;
   word-break: break-all;
+}
+
+ul.social-links {
+  display: inline;
+}
+
+img.mugshot {
+  display: inline;
+  float: left;
+  margin: 0 15px;
+}
+
+div p.bio {
+  font-size: 13px;
 }
