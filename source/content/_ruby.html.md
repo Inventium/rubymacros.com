@@ -63,7 +63,11 @@ into `irb` or however you like to execute your Ruby.
 #### Eval version
 
 That was nice, but kind of complicated, what with the `define_method`
-and all. We can make it simpler, so let's.
+and `instance_variable_get`. We're just trying to define a method and
+get the value of an instance variable. Why can't we do that those 
+things the normal way?
+
+Let's make it simpler.
 
 Consider a "normal" method with `def` getting a normal instance
 variable.
@@ -80,6 +84,7 @@ class Module
 end
 </pre>
 
+The eval is now the only unusual contruct in this version.
 The drawback with this method is putting everything into a string and
 invoking eval. This is bad because 1. calling `eval` is potentially
 risky, you will need to watch for code injection; 2. it's kind of ugly. 
@@ -137,15 +142,39 @@ parsing the extended syntax. The next example uses the rubymacros gem:
 macro rm_attr_reader name
   :(
     def ^name
-      ^(RedParse::VarNode["@"+name])
+      ^(RedParse::VarNode["@#{name}"])
     end
   )
 end
 </pre>
 
-The first problem is obvious: `macro` is not a reserved word in Ruby,
-hence the syntax highlighter doesn't highlight the syntax correctly. The 
-:( ... ) and unary ^ constructs are also non-standard.
+(The syntax highlighter doesn't highlight this correctly because `macro` is 
+not a reserved word in Ruby. Try to read it as kind of like a method.
+:( ... ) and unary ^ constructs are also part of the new syntactical magic 
+that rubymacros adds. You should see them as similar to double-quoted strings
+and the string interpolations (#{...}) within them.)
+
+The last three versions of our new version of attr_reader share some common 
+characteristics:
+* in all cases, an accessor method is defined within a quoted construct.
+* somehow that quoted method is interpolated into regular code so it can be 
+  executed.
+* the quoted method definition contains holes that get filled in by 
+  parameters that are passed in at the time of interpolation.
+* the quoted code and the values placed in the holes that fill it are data
+  structures of some sort -- either strings or parse trees. But they aren't
+  code yet... they're things that will turn into code. They're.... meta-code.
+
+
+The advantage of having data structures that represent nascent code is that 
+they can be manipulated like any other data before you turn them into code.
+
+The first version is also broadly similar to this approach. But instead of
+quoted code with holes in it, it uses magical interpreter methods to
+accomplish the same thing. I call this dynamic programming more than 
+meta-programming, but the effect is the same. Even with this first version,
+the name of the method and the instance variable are represented as strings
+which can be manipulated.
 
 ### Common Rails "macros"
 
