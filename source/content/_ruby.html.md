@@ -93,7 +93,7 @@ risky, you will need to watch for code injection; 2. it's kind of ugly.
 
 #### C Preprocessor (CPP) version
 
-Here's a cool trick, leveraging the C Preprocessor's macro facility
+Here's a trick, leveraging the C Preprocessor's macro facility
 right in your Ruby code. Check out this example of a text substitution
 macro:
 
@@ -126,12 +126,19 @@ $ gcc -x c -E cpp_attr_reader.rb | ruby
 
 Nifty!
 
-Ok, maybe not so nifty. As Vandervoorde and Jossutis might say:
+Ok, maybe not so nifty. As
+[Vandervoorde and
+Jossutis](http://www.amazon.com/C-Templates-The-Complete-Guide/dp/0201734842)
+might say:
 
 <blockquote>
 Code is replaced by some "stupid text
 replacement mechanism" that has no idea of scope and types.
 </blockquote>
+
+So this trick might be cool, or it might be retarded, but I've
+(Caleb) seen this (and done it) in the wild.
+
 
 #### Parse tree substitution
 
@@ -174,8 +181,7 @@ they can be manipulated like any other data before you turn them into code.
 
 The first version is also broadly similar to this approach. But instead of
 quoted code with holes in it, it uses magical interpreter methods to
-accomplish the same thing. I call this dynamic programming more than 
-meta-programming, but the effect is the same. Even with this first version,
+accomplish the same thing. Even with this first version,
 the name of the method and the instance variable are represented as strings
 which can be manipulated.
 
