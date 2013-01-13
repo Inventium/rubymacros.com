@@ -7,7 +7,7 @@ passed to the assert method. When constructing error message, the macro
 can retrieve both arguments.  Test::Unit solves by creating various
 methods corresponding to various types of conditional operators.  
 
-For example, `assert.equals`, `assert.greater_than`, etc etc etc.
+For example, `assert_equals`, `assert_greater_than`, etc etc etc.
 Assert macro gives the value AND the names of the arguments to the
 conditional are in the macro.  This allows code to run without
 evaluating the assertion.  Thus, error checking can go into code,

@@ -90,7 +90,8 @@ probably not the best use of your time.
 
 ### Who this web page is for
 
-The authors of this web page come from primarily a C/TeX
+The authors (Dave and Caleb) of _Ruby Macros for You_
+know macros from a C/TeX
 background, with a small amount of Lisp/Scheme and Ruby.
 Macros in those environments have specific connotations
 which overlap Ruby's notion of macros, but are not
