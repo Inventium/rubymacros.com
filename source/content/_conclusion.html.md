@@ -1,6 +1,12 @@
 
 ## Summary
 
+> Unfortunately, the word macro describes a lot of things in computing to
+> which Common Lisp's macros bear only a vague and metaphorical
+> similarity. --- From _Chapter 7. Macros: Standard Control Constructs_,
+> [Seibel's Practical Common
+Lisp](http://www.gigamonkeys.com/book/macros-standard-control-constructs.html).
+
 In the end, we're not really sure whether Ruby has "real" macros or not.
 
 We are sure that Ruby allows construction of methods which behave

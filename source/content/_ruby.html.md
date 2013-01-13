@@ -114,7 +114,7 @@ p f.bar
 One limitation of this technique is that Ruby comments are treated as
 preprocessor directives.  For example, `# My Ruby comment` isn't
 parseable using CPP.  One could, one supposes, use `c/c++` commenting 
-in lieue of Ruby commenting.  Which smacks of jumping from frying 
+in lieu of Ruby commenting.  Which smacks of jumping from frying 
 pan to fire, to stretch a metaphor.
 
 But, our example runs: 
@@ -201,7 +201,7 @@ $ rake routes
             DELETE /foos/:id(.:format) foos#update
 </pre>
 
-We're showing something controlled by an `foo`, whatever that may be.
+We're showing something controlled by a `foo`, whatever that may be.
 When you invoke a "route method" using, e.g., `foos_path`, the result is
 indistinguishable from a text substitution macro. 
 
