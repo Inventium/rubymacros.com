@@ -1,4 +1,6 @@
 
+## We're gonna talk about Ruby now...
+
 ### What Ruby calls macros
 
 From the Pickaxe (4th ed., p. 378), we have macros defined as 

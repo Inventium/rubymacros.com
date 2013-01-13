@@ -106,7 +106,3 @@ However, if you are moving from Ruby to languages
 in either the Lisp camp or the C/C++ camp, you will 
 find some valuable information here.
 
-
-## We're gonna talk about Ruby now...
-
-

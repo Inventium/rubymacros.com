@@ -22,7 +22,9 @@ of the book. Do all the examples, by hand.
 
 * Peter Seibel's [Practical Common Lisp](http://www.gigamonkeys.com/book/) is available online.
 
-* Ola Bini
+* Ola Bini writes thoughtful articles on
+macros and more at [Programming Language
+Synchronicity](http://olabini.com/blog/).
 
 * Interesting [RSpec macro thread](http://rubyforge.org/pipermail/rspec-users/2011-August/020463.html)
 

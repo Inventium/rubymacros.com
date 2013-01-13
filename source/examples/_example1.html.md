@@ -1,4 +1,8 @@
-### Example 1 Caleb's Assert macro
+---
+example: 1
+---
+
+### Example - Caleb's Assert macro
 
 Consider an assert macro which allows inspecting an expression which is
 passed to the assert method. When constructing error message, the macro
