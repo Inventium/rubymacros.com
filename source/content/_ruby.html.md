@@ -6,7 +6,7 @@ Ruby methods which generate code "behind the scenes" by
 turning small bits of code into larger bits of code.
 
 
-The simplest Ruby "macro", a sort of string substitution:
+The simplest Ruby "macro," a sort of string substitution:
 
 
 <pre class="brush:ruby">
@@ -156,6 +156,7 @@ and the string interpolations (#{...}) within them.)
 
 The last three versions of our new version of attr_reader share some common 
 characteristics:
+
 * in all cases, an accessor method is defined within a quoted construct.
 * somehow that quoted method is interpolated into regular code so it can be 
   executed.
@@ -163,7 +164,7 @@ characteristics:
   parameters that are passed in at the time of interpolation.
 * the quoted code and the values placed in the holes that fill it are data
   structures of some sort -- either strings or parse trees. But they aren't
-  code yet... they're things that will turn into code. They're.... meta-code.
+  code yet... they're things that will turn into code. They're... meta-code.
 
 
 The advantage of having data structures that represent nascent code is that 
