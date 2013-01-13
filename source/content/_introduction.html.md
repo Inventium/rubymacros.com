@@ -33,7 +33,7 @@ In general, macros are used for language extension via
 These goals are accomplished by:
 
 1. Textual replacement
-2. Method expansion
+2. Expression expansion
 
 
 Macros may appear identical to functions 
