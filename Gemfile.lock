@@ -49,6 +49,8 @@ GEM
     haml (3.1.6)
     highline (1.6.12)
     hike (1.2.1)
+    hoe (3.4.0)
+      rake (>= 0.8, < 11.0)
     http_router (0.10.2)
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
@@ -106,9 +108,21 @@ GEM
       rack
     rack-test (0.6.1)
       rack (>= 1.0)
+    rake (10.0.3)
     rb-fsevent (0.9.1)
     redcarpet (2.2.2)
+    redparse (0.8.4)
+      reg (>= 0.4.8)
+      rubylexer (= 0.7.7)
+    reg (0.4.8)
+      sequence (>= 0.2.3)
+    rubylexer (0.7.7)
+      sequence (>= 0.2.3)
+    rubymacros (0.1.5)
+      hoe (>= 1.12.2)
+      redparse (>= 0.8.2)
     sass (3.1.19)
+    sequence (0.2.3)
     sinatra (1.3.2)
       rack (~> 1.3, >= 1.3.6)
       rack-protection (~> 1.2)
@@ -148,3 +162,4 @@ DEPENDENCIES
   kramdown
   middleman
   rb-fsevent
+  rubymacros
