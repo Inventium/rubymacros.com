@@ -205,4 +205,10 @@ We're showing something controlled by a `foo`, whatever that may be.
 When you invoke a "route method" using, e.g., `foos_path`, the result is
 indistinguishable from a text substitution macro. 
 
+### Generating methods
 
+From Avdi Grimm, a short [screencast on modules and
+methods](http://www.youtube.com/watch?v=FlGdAsESNGo).
+
+Paraphrasing, "It's common to refer to class-level methods which
+generate other methods and modules as macros."
