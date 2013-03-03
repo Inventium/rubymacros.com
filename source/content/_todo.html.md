@@ -18,4 +18,7 @@ library may be an add on library.
 
 A small amount of math: \\(\forall x \in X\\)
 
-Rails helpers for macro examples.
+### Rails helpers for macro examples.
+
+* [Delegate
+macro](http://guides.rubyonrails.org/active_support_core_extensions.html#method-delegation).
