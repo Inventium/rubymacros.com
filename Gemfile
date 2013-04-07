@@ -1,7 +1,8 @@
-source :rubygems
+source 'https://rubygems.org'
 
-gem 'middleman'
+gem 'middleman', '3.0.13'
 gem 'haml'
+gem 'sass'
 gem 'kramdown'
 gem 'capistrano'
 gem 'deckrb'
