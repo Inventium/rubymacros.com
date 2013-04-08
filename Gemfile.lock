@@ -1,35 +1,3 @@
-GIT
-  remote: git://github.com/coatl/redparse.git
-  revision: 8cbe09c4a87281e30dafe10199eeda3e45a1f77a
-  ref: 8cbe09c4a8
-  specs:
-    redparse (1.0.0)
-      reg (>= 0.4.8)
-      rubylexer (= 0.8.0)
-
-GIT
-  remote: git://github.com/coatl/rubylexer.git
-  revision: a03d56200a9e43ebfe0606db7f4ef539c34e7b1a
-  ref: a03d56200a
-  specs:
-    rubylexer (0.8.0)
-      sequence (>= 0.2.4)
-
-GIT
-  remote: git://github.com/coatl/rubymacros.git
-  revision: 6d0fbd8e26ec7f9ad2ba1c676e466bace395bc97
-  ref: 6d0fbd8e26
-  specs:
-    rubymacros (0.1.5)
-      redparse (>= 0.8.5)
-
-GIT
-  remote: git://github.com/coatl/sequence.git
-  revision: dba92a8535c77e417ea132998cca333f9f2c5024
-  ref: dba92a8535
-  specs:
-    sequence (0.2.4)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -140,8 +108,6 @@ GEM
       rack (>= 1.0)
     rb-fsevent (0.9.3)
     redcarpet (2.2.2)
-    reg (0.4.8)
-      sequence (>= 0.2.3)
     rerun (0.8.0)
       listen
     sass (3.2.7)
@@ -184,10 +150,6 @@ DEPENDENCIES
   kramdown
   middleman (= 3.0.13)
   rb-fsevent
-  redparse!
   rerun
-  rubylexer!
-  rubymacros!
   sass
-  sequence!
   thin
