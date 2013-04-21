@@ -16,6 +16,9 @@ library may be an add on library.
  * http://c2.com/cgi/wiki?GenerativeProgramming
  * Macro style programming, Rails 3 Way, p. 121
 
+* Link out to Metz's "Omega Mess" as and end goal of refactoring
+  into macro-like constructions.
+
 A small amount of math: \\(\forall x \in X\\)
 
 ### Rails helpers for macro examples.
