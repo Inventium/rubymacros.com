@@ -27,3 +27,4 @@ A small amount of math: \\(\forall x \in X\\)
 macro](http://guides.rubyonrails.org/active_support_core_extensions.html#method-delegation).
 
 * Rails routing macros, Agile Rails, p. 310.
+* Macros in DSLs, Chapter 15, page 183 of Domain-specific languages.
