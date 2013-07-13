@@ -2,9 +2,11 @@
 
 class Module
   def rm_attr_reader name
-    define_method name do
-      instance_variable_get "@#{name}"
-    end
+    eval "
+      def #{name}
+        @#{name}
+      end
+    "
   end
 end
 
@@ -18,6 +20,7 @@ end
 describe "self" do
   it "gets @bar from Foo" do
     f = Foo.new "quux"
-    expect(f.bar).to eq "quux"
+    puts f.methods.include? :rm_attr_reader
+    #expect(f.bar).to eq "quux"
   end
 end
