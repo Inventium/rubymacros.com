@@ -4,8 +4,8 @@
 %div.subtitle
   (a work in progress)
 
--#= partial 'content/introduction'
--#= partial 'content/ruby/'
+= partial 'content/introduction'
+= partial 'content/ruby/'
 
 
 -#= partial 'content/string_substitution'
@@ -18,21 +18,19 @@
 -#= partial 'content/lisp_iteration'
 -#= partial 'content/outline'
 
--#= partial 'content/conclusion'
+= partial 'content/conclusion'
 
--#= partial 'content/social_links_small'
+= partial 'content/social_links_small'
 
--#%div.row
--#  %div.span4
--#    %img.mugshot{ :src => "/images/blackie4-100x100.jpg"}
--#    %p.bio
--#      Dave is software professional specializing in general development, who appreciates TeX's lack of arithmetic operators.
--#
--#  %div.span4
--#    %img.mugshot{ :src => "/images/caleb_clausen_100x102.jpeg"}
--#    %p.bio
--#      Caleb has written far too many C macros and took Gema way too seriously.
--#
--#= partial 'content/disqus'
+%div.row
+  %div.span4
+    %img.mugshot{ :src => "/images/blackie4-100x100.jpg"}
+    %p.bio
+      Dave is software professional specializing in general development, who appreciates TeX's lack of arithmetic operators.
 
--#= partial 'content/footer'
+  %div.span4
+    %img.mugshot{ :src => "/images/caleb_clausen_100x102.jpeg"}
+    %p.bio
+      Caleb has written far too many C macros and took Gema way too seriously.
+
+= partial 'content/disqus'

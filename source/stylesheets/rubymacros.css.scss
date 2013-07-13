@@ -80,7 +80,11 @@ pre {
   word-break: break-all;
 }
 
-ul.social-links {
+ul.social-links li {
+  display: inline;
+}
+
+.g-plusone {
   display: inline;
 }
 
