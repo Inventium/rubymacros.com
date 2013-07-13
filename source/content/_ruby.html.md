@@ -36,14 +36,12 @@ Ruby's standard library implementation of `attr_reader`. (The `rm_`
 
 <pre class="brush:ruby">
 class Module
-
   # Define our macro here...
   def rm_attr_reader(name)
     define_method(name) do
       instance_variable_get("@#{name}")
     end
   end
-
 end
 
 class Foo
@@ -60,6 +58,11 @@ f.bar # => "quux"
 
 You can type all the above into `irb` or put in a file an load it 
 into `irb` or however you like to execute your Ruby. 
+
+#### Exercise:
+
+*Write a unit test or spec to verify the behavior of
+`rm_attr_reader`, then implement as shown above.*
 
 
 #### Eval version
