@@ -28,3 +28,8 @@ macro](http://guides.rubyonrails.org/active_support_core_extensions.html#method-
 
 * Rails routing macros, Agile Rails, p. 310.
 * Macros in DSLs, Chapter 15, page 183 of Domain-specific languages.
+
+### Macro scoping as an example of de facto dynamic scope
+
+This is worth digging into a bit deeper, check the [scope article on
+Wikipedia](http://en.wikipedia.org/wiki/Scope_(computer_science)#Macro_expansion)
