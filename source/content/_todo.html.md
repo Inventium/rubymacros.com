@@ -21,6 +21,9 @@ library may be an add on library.
 
 A small amount of math: \\(\forall x \in X\\)
 
+Check out Wikipedia page on scope.
+
+* http://www.rubytapas.com/episodes/27-Macros-and-Modules
 ### Rails helpers for macro examples.
 
 * [Delegate
@@ -28,6 +31,10 @@ macro](http://guides.rubyonrails.org/active_support_core_extensions.html#method-
 
 * Rails routing macros, Agile Rails, p. 310.
 * Macros in DSLs, Chapter 15, page 183 of Domain-specific languages.
+
+* associations/builder/has_one.rb
+
+
 
 ### Macro scoping as an example of de facto dynamic scope
 
