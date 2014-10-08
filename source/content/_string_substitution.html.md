@@ -1,7 +1,7 @@
 
 ## Party's over
 
-Now that we're through the easy stuff (!), let's take a closer look a
+Now that we're through the easy (!) stuff, let's take a closer look a
 what the concepts really mean, string and parse tree substitution.
 
 #### A tiny treatise on string substitution
@@ -71,7 +71,4 @@ it definitely was an operator. % also always starts a string when following oper
 To reiterate, it's better not to have to handle this stuff yourself. 
 If you're using a string-based macro system, you either have to make do 
 with limited capabilities, or you run smack into all these hard parsing problems, and 
-you'll break your pick on it pretty quickly. This stuff makes parsing xml 
-with regular expressions look easy.
-
-
+you'll break your pick on it pretty quickly.

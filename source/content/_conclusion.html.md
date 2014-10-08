@@ -8,8 +8,10 @@
 Lisp](http://www.gigamonkeys.com/book/macros-standard-control-constructs.html).
 
 In the end, we're not really sure whether Ruby has "real" macros or not.
+Further, we're not sure it really matters.
 
 We are sure that Ruby allows construction of methods which behave
+- from the programmer's point of view -
 identically to text substitution macros, and that adding parse tree
 substitution would require a bit of syntax hackerage.
 
@@ -52,6 +54,6 @@ emitting Chewbacca-style roars of frustration.  A little
 SEO juju and snapped up the exact match domain, to wit:
 rubymacros.com, and a vow to set the matter straight once 
 and for all, with some links to the best available pages
-on the web. Curation doncha know.
+on the web. Curation and all that.
 
 

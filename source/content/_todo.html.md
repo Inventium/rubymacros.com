@@ -1,6 +1,8 @@
 
 ## TODO
 
+* http://stackoverflow.com/questions/926489/rails-macro-style-functions
+
 * Sort out notes on static versus dynamic metaprogramming
 * Ruby metaprogramming seems to be a sort of "patterns language" for macros? 
 How would each metaprogramming construct in Ruby be implemented in CL?
@@ -16,7 +18,7 @@ library may be an add on library.
  * http://c2.com/cgi/wiki?GenerativeProgramming
  * Macro style programming, Rails 3 Way, p. 121
 
-* Link out to Metz's "Omega Mess" as and end goal of refactoring
+* Link out to Metz's "Omega Mess" as an end goal of refactoring
   into macro-like constructions.
 
 A small amount of math: \\(\forall x \in X\\)
@@ -34,6 +36,21 @@ macro](http://guides.rubyonrails.org/active_support_core_extensions.html#method-
 
 * associations/builder/has_one.rb
 
+## Internal mutation
+
+Consider this construction:
+
+<pre class="brush:ruby">
+class Bar
+  def self.some_method_in_bar action
+    @action = action
+  end
+end
+
+class Foo < Bar
+  some_method_in_bar 'quux'
+end
+</pre>
 
 
 ### Macro scoping as an example of de facto dynamic scope
