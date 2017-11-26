@@ -1,20 +1,26 @@
 source 'https://rubygems.org'
 
-gem 'middleman', '3.3.7'
+gem 'middleman' # , '3.3.7'
 gem 'haml'
 gem 'sass'
 gem 'kramdown'
-gem 'capistrano'
-gem 'deckrb'
-gem 'thin'
-gem 'rerun'
+
+# BUG in tilt? Need this gem to prevent server from crashing
+# on startup. Apparently having a .rb file in the source
+# directory will trigger the bug.
+gem 'opal'
+
+# gem 'capistrano'
+# gem 'deckrb'
+# gem 'thin'
+# gem 'rerun'
 
 #gem 'redcarpet'
 #gem 'maruku'
 #gem 'coderay'
 #gem 'pygments.rb'
 #gem 'haml-coderay'
-gem 'rb-fsevent'
+# gem 'rb-fsevent'
 #gem 'rack-codehighlighter', :git => "git://github.com/wbzyl/rack-codehighlighter.git"
 
 #gem 'rubymacros', :git => "git://github.com/coatl/rubymacros.git", :ref => '6d0fbd8e26'
