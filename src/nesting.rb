@@ -1,6 +1,7 @@
 #!/usr/bin/env ruby
 
 # From https://pragmaticstudio.com/blog/2015/4/14/ruby-macros
+# presented by Mike Clark.
 
 # Not sure is the following is a quote from someone else or something
 # I wrote up for myself:
@@ -9,7 +10,14 @@
 # lastly, variables which are defined outside the closure in some way,
 # but are used within the closure.
 
-class Movie
+# From the screen cast:
+#
+# * [00:28] "Class-level declaration," sometimes called a "macro."
+#
+#
+# * [02:32] "Singleton method": declared on a single (instantiated) object.
+
+Class Movie
   def self.has_many(name)
     puts "#{self} has many #{name}"
 
